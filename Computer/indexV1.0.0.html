@@ -1,0 +1,108 @@
+<!-- 
+Version 1.0
+indexV1.0.0.html
+Shiming He
+Original Author: Austin Wang
+2023-05-13
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+  		<title>V1.0.0 Electric Car Telemetrics and Communiction</title>
+
+  		<link rel="stylesheet" type="text/css" href="cssV1.0.0.css">
+    	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	</head>
+
+	<body>
+		<!--Left side message boxes -->
+		<div class = "split left">
+
+			<h1 style = "font-size: 5vh;">Data In</h1>
+
+			<div style = "background-color: lightgrey; max-height: 40vh; overflow: scroll;">
+  				<p><strong>System Updates</strong></p>
+  				<div id="messagesSystem"/></div>
+			</div>
+
+			<div style = "background-color: lightblue;  max-height: 20vh; overflow: scroll;" >
+				<p><strong>Raw Messages</strong></p>
+    			<pre>  Ah    V    A     S     D3   </pre>
+				<div id="messagesRawData", style="width:100%;"></div>
+			</div>
+
+			<div style = "background-color: lightgrey;  max-height: 20vh; overflow: scroll;" >
+				<p><strong>Processed Messages</strong></p>
+    			<pre>  Total Ah   Ah Left   Remaining time   Ah per Min   Raspberry Pi target Ah</pre>
+				<div id="messagesProcessedData", style="width:100%;"></div>
+			</div>
+
+		</div>
+
+		<!-- Right side graphs -->
+		<div class = "split right">
+            <Label><strong>Battery Preset</strong></label>
+    		<br><br> 
+            <button type = "button" onclick = 'startRace()'>Start Race!</button>
+    		<br><br> 
+            <label for="battery_Total_Ah">Battery Total Ah:</label>
+            <input type="text" id="battery_Total" name="battery_Total" placeholder="30">
+    		<br><br>
+            <label for="Total_time_txt">Total time(minutes):</label>
+            <input type="text" id="Total_time" name="Total_time" placeholder="60">
+            <button type = "button" onclick = 'updateTime()'>Update Time</button>
+            
+            <div style = "background-color: lightblue;" >
+				<p><strong>Prediction</strong></p>
+				<label>Prediction Mode: </label>
+                <button type = "button" onclick = 'autoModeSet()'>Automatic Mode</button>
+                <button type = "button" onclick = 'semiAutoModeSet()'>Semi-Auto Mode</button>
+                <button type = "button" onclick = 'manModeSet()'>Manual Mode</button>
+                <br><br>
+				<label>Send Target: </label>
+                <button type = "button" onclick = 'sendSignalSlower()'>Slow Down</button>
+                <button type = "button" onclick = 'sendSignalOnspeed()'>Center</button>
+                <button type = "button" onclick = 'sendSignalFaster()'>Speed Up</button>
+                <br><br>
+                <label for="Target_val_text">Target Ah per minute:</label>
+                <input type="text" id="Target_val" name="Target_val" placeholder="0.5">
+                <br>
+                <button type = "button" onclick = 'sendTarget()'>Send Target!</button>
+                <br><br>
+			</div>
+            
+            <div style = "background-color: lightgrey;  max-height: 20vh; overflow: scroll;" >
+    			<label><strong>Ah Left in Battery,   Ah used in past minute: </strong></label>
+                <br><br>
+				<div id="messagesAhLeft", style="width:100%;"></div>
+			</div>
+			<h1 style = "font-size: 5vh;">Data Graphed</h1>
+    		<div id="chartTotalAh"></div>
+    		<br><br><br>
+    		<div id="chartAhMin"></div>
+    		<br><br><br>
+    		<div id="chartAh"></div>
+    		<br><br><br>
+    		<div id="chartV"></div>
+            <br><br><br>
+            
+    		<div id="chartA"></div>
+            <br><br><br>
+    		
+            <div id="chartS"></div>
+            <br><br><br>
+            
+            <div id="chartD"></div>
+            <br><br><br>
+		</div>
+
+	</body>
+
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.27.4.min.js"></script>
+	<script src="jsV1.0.0.js"></script>
+
+</html>
+
