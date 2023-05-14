@@ -44,8 +44,8 @@ const theEntry = 'Earth';
 
 /* Make a pubnub object, define keys and open connection */
 const pubnub = new PubNub({
-  publishKey: 'pub-c-f418f6ca-711a-402a-b373-fe542788cf3b',//use your PubNub publish key
-  subscribeKey: 'sub-c-3a2983ca-ce37-11ec-ab76-de5c934881d6', // use your PubNub subscribe key
+  publishKey: '',//use your PubNub publish key
+  subscribeKey: '', // use your PubNub subscribe key
   uuid: "theClientUUID"
 });
 pubnub.subscribe({
