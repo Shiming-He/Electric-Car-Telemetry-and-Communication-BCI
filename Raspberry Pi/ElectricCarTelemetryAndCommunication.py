@@ -55,8 +55,8 @@ pygame_display = Ecar_display_pygame.Ecar_pygame_display()
 
 # Set up the config property for PubNub
 pnconfig = PNConfiguration()
-pnconfig.publish_key = "pub-c-f418f6ca-711a-402a-b373-fe542788cf3b" # Add the piblish key for your PubNub Channel
-pnconfig.subscribe_key = "sub-c-3a2983ca-ce37-11ec-ab76-de5c934881d6" # Add the Subscribe key for your PubNub Channel
+pnconfig.publish_key = "" # Add the piblish key for your PubNub Channel
+pnconfig.subscribe_key = "" # Add the Subscribe key for your PubNub Channel
 pnconfig.uuid = "serverUUID-PUB"
 
 # Initialize a PubNub object to make PubNub API calls.
