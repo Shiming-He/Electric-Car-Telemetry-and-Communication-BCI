@@ -1,7 +1,7 @@
 # Electric-Car-Telemetry-and-Communication-BCI
-This is the new Bluevale Collegiate Institutes Electric Car Telemetry and Communication system. It borrows many important elements of the previous year's system, with a completely new design. It utilizes a Cycle Analyst to provide information about the cars present performance. Also it uses a Raspberry Pi to compute, transmite, and receive information about the performance. Moreover it uses a phone as the display for the driver, and as a hotspot for the Raspberry Pi. Furthermore, a computer is recommended to run the website to observe the information. Lastly, the system uses PubNub to communicate between the Raspberry Pi and the Computer.
+This is the new Bluevale Collegiate Institute's Electric Car Telemetry and Communication system. It borrows many important elements of the previous year's system, with a completely new design. It utilizes a Cycle Analyst to provide information about the cars present performance. Also it uses a Raspberry Pi to compute, transmite, and receive information about the performance. Moreover it uses a phone as the display for the driver, and as a hotspot for the Raspberry Pi. Furthermore, a computer is recommended to run the website to observe the information. Lastly, the system uses PubNub to communicate between the Raspberry Pi and the Computer.
 # Contributors
-Shiming He, and the 2023 Data Management Team
+The 2023 Data Management Team
 # Special Thank You
 A special thanks to the 2022 Data Management Team, especially Austin Wang, and Steven Cao for their work on the original Telemetry System.
 # Features
